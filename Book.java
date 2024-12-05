@@ -1,18 +1,16 @@
-import java.util.Date;
-
 public class Book {
     private String title;
     private String author;
-    private Date publishYear;
+    private Integer publishYear;;
     private Status status;
     public enum Status {
         Banned, Exist, Borrowed;
     }
-    public Book(String title, String author, Date publishYear, Status status) {
+    public Book(String title, String author, Integer publishYear, Status status) {
         if (title == null || title.isEmpty()){
             throw new IllegalArgumentException("Title cannot be null or empty");}
         if (author == null || author.isEmpty()){
-        throw new IllegalArgumentException("Author cannot be null or empty");}
+            throw new IllegalArgumentException("Author cannot be null or empty");}
         if (publishYear == null ){
             throw new IllegalArgumentException("Publish Year cannot be null");}
         if (status == null){
@@ -28,7 +26,7 @@ public class Book {
     public String getAuthor() {
         return author;
     }
-    public Date getPublishYear() {
+    public Integer getPublishYear() {
         return publishYear;
     }
     public Status getStatus() {
@@ -40,7 +38,7 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author.trim();
     }
-    public void setPublishYear(Date publishYear) {
+    public void setPublishYear(Integer publishYear) {
         this.publishYear = publishYear;
 
     }
